@@ -12,6 +12,9 @@ To tell the go tool about this workspace, set the go path environment variable
 ```
 $ export GOPATH=$HOME/{pwd}/sample-project
 ```
+#### Imports
+Go first searches for package directory inside GOROOT/src directory and if it doesn’t find the package, then it looks for GOPATH/src. Since, fmt package is part of Go’s standard library which is located in GOROOT/src, it is imported from there. But since Go cannot find "foo" package inside GOROOT, it will lookup inside GOPATH/src and we have it there.
+
 ___
 Visualize current
 ```

@@ -5,7 +5,7 @@
 
 ### Good Reads
 [Effective Go](https://golang.org/doc/effective_go.html) \
-[Packages](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)
+[Packages](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)\
 [Modules](https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16)
 
 ### Videos

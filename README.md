@@ -4,14 +4,16 @@
 [Language Specification](https://golang.org/ref/spec)
 
 ### Good Reads
-[Effective Go](https://golang.org/doc/effective_go.html)
-
+[Effective Go](https://golang.org/doc/effective_go.html) \
+[Packages](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)
+[Modules](https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16)
 
 ### Videos
 [Channels](https://www.youtube.com/watch?v=KBZlN0izeiY)\
 [Mutex](https://www.youtube.com/watch?v=cjMdUmfzQWs)\
 [Install Packages](https://www.youtube.com/watch?v=Kw1ZVXF7s5o)\
 [Code Structure](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+[Modules](https://www.youtube.com/watch?v=B0EjcYaBm9A)
 
 
 ## Naming Convention
@@ -33,6 +35,16 @@ suppliers.go
 products.go
 ```
 
+- Go community recommends to use plain and simple names for packages. For example, strutils for string utility functions or http for HTTP requests related functions. A package names with under_scores, hy-phens or mixedCaps should be avoided.
+
+- Like main function, init function is called by Go when a package is initialized. It does not take any arguments and doesn’t return any value. The init function is implicitly declared by Go, hence you can not reference it from anywhere (or call it like init()). You can have multiple init functions in a file or a package. Order of the execution of init function in a file will be according to the order of their appearances. After all the init functions are executed, main function is called. Hence, the main job of init function is to initialize global variables that cannot be initialized in the global context. For example, initialization of an array. Since, for syntax is not valid in package scope, we can initialize the array integers of size 10 using for loop inside init function.
+
+<div align=left ><img src="https://miro.medium.com/max/913/1*7opoqANNzsqLyHViQaK-tg.png"/>
+<div align=left ><img src="https://miro.medium.com/max/913/1*UswvbXJpnMDT-kkeAqnzZw.png"/>
+
+
+### Modules
+Go provides a new feature called Modules which provides flexibility to manage your project and dependencies with ease. If you are working on Go packages, then you should consider relocating your project to Go Modules.
 
 ### Functions and methods
 - Go doesn't have setters and getters

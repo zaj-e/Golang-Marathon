@@ -35,6 +35,7 @@ ___
 
 
 ## Commands
+The ./... pattern matches all the packages in a module. So when you run go build ./... or go test ./..., you are building or testing all the packages inside a module (including module itself if it is a package). These commands also download and install dependencies inside go.mod file.
 ___
 ```
 go build
@@ -46,3 +47,24 @@ go install
 ```
 <ins>Executable:</ins> The go tool has installed it to the bin directory inside the workspace \
 <ins>Library</ins>: To make the string package available to other code, we need to install the package object to our workspace with go install. Now we can find the package object  inside the pkg 
+___
+```
+go mod graph
+```
+Shows you the dependencies of your module
+___
+```
+go mod vendor
+```
+Sometimes, when you are running automated tests for your project (executable module like main in our case), there is a chance that your test machine may face some network issues while downloading the dependencies or when a test machine is running in an isolated environment. In such cases, you need to provide dependencies beforehand. This is called vendoring. When you use go build, it looks for the dependencies inside module cache directory but you can force Go to use dependencies from vendor directory of the module using the command
+```
+go build -mod vendor
+```
+___
+```
+ GO111MODULE=on go install <package>@<version>
+ ```
+ To install a CLI application (module) from anywhere in the terminal, use the following command. This will install a module inside the module cache directory and generate a binary executable file inside $GOPATH/bin directory.Even though you could install multiple versions of a module, you can only have a single binary executable file. So the module cache directory will have source code of multiple versions, however, the bin directory will have only one instance of the module binary.
+
+## Reference
+- https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16

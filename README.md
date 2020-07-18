@@ -12,9 +12,9 @@
 [Channels](https://www.youtube.com/watch?v=KBZlN0izeiY)\
 [Mutex](https://www.youtube.com/watch?v=cjMdUmfzQWs)\
 [Install Packages](https://www.youtube.com/watch?v=Kw1ZVXF7s5o)\
-[Code Structure](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-[Modules](https://www.youtube.com/watch?v=B0EjcYaBm9A)
-
+[Code Structure](https://www.youtube.com/watch?v=MzTcsI6tn-0)\
+[Modules](https://www.youtube.com/watch?v=B0EjcYaBm9A)\
+[Dependency Management/Versioning](https://www.youtube.com/watch?v=F8nrpe0XWRg)
 
 ## Naming Convention
 ### Variable
@@ -60,6 +60,12 @@ package: inventory
 orders.go
 --  contains Orders type
     and OrderStorage interface
+```
+
+### Publishing
+- Before publishing a module, always perform:
+```
+go mod tidy
 ```
 
 ### Comments 

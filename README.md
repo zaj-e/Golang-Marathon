@@ -6,15 +6,18 @@
 ### Good Reads
 [Effective Go](https://golang.org/doc/effective_go.html) \
 [Packages](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)\
-[Modules](https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16)
+[Modules](https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16)\
+[Modules Extended](https://github.com/golang/go/wikiModules#is-gosum-a-lock-file-why-does-gosum-include-information-for-module-versions-i-am-no-longer-using)\
+[Variadic functions](https://medium.com/rungo/variadic-function-in-go-5d9b23f4c01a)
 
 ### Videos
 [Channels](https://www.youtube.com/watch?v=KBZlN0izeiY)\
 [Mutex](https://www.youtube.com/watch?v=cjMdUmfzQWs)\
 [Install Packages](https://www.youtube.com/watch?v=Kw1ZVXF7s5o)\
 [Code Structure](https://www.youtube.com/watch?v=MzTcsI6tn-0)\
-[Modules](https://www.youtube.com/watch?v=B0EjcYaBm9A)\
+[Modules](https://www.youtube.com/watch?v=B0EjcYaBm9A)\ 
 [Dependency Management/Versioning](https://www.youtube.com/watch?v=F8nrpe0XWRg)
+[go generate](https://www.youtube.com/watch?v=RfKgBI4JgSI)
 
 ## Naming Convention
 ### Variable
